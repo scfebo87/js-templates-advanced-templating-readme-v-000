@@ -1,4 +1,4 @@
-function loadIssue() {
+function loadIssues() {
   let issue = {
     state: "closed",
     number: 5,
@@ -7,8 +7,6 @@ function loadIssue() {
   };
  
   let template = Handlebars.compile(document.getElementById("issue-template").innerHTML);
-    for(let i=0; i<issues.length; i++) { 
-      
-  let result = template(issue);
+  let result = template(issues);
   document.getElementsByTagName("main")[0].innerHTML += result;
 }
